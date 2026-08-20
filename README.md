@@ -54,16 +54,9 @@ is not safe to run cells out of order.
 
 ## Known caveats / things to verify against real data
 
-- **Branch names**: `dstpxlab`/`dstpylab`/`dstpzlab` (D* lab-frame momentum)
-  and `tagpxcms`/`tagpycms`/`tagpzcms` (B_tag CMS momentum) are assumed by
-  naming-convention analogy with existing branches — confirm they exist
-  with these exact names.
 - **Pion charge convention**: pi1/pi2 are assumed to be the same-sign pair
   (pi+ pi+) and pi3 the opposite-sign pion (pi-) — confirm against the
   actual ntuple index assignment.
-- **`delta_M` pre-cut window** (`0.140–0.151` GeV): a reasonable default
-  around the nominal split (0.1454 GeV), but should be re-checked against
-  the real plotted peak/resolution once run on full statistics.
 - **Significance / yields are not yet luminosity-normalized** — `FRAC_BK`
   and cross-section/branching-fraction scaling still need to be applied for
   a physically meaningful significance (flagged in-notebook as next step).
